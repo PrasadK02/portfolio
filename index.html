@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3682aef1fc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sideMenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact Details</a></li>
+                    <i class="fas fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h2><span>Hello World,</span></h2>
+                <h1> I'm Prasad Khairnar</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"></div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p class="about-content">Hello, I'm Prasad Khairnar. My academic background is a Degree in Bachelor of Computer Science (B.Sc.C.S.). 
+                        Having relevent programming skills. Also has certification as 
+                        Full Stack Programmer in Java. I am an enthusiastic about developing Web-application 
+                        as well as Desktop & Android Application. I am able to code in languages like Java, TypeScript, HTML&CSS and also quite good with Database.
+                         I've certification in creating framework applications which are Angular & SpringBoot
+                        During my academic years and Course I've Developed various projects like E-Commerce Website, Pen Run(Unity 3D), SoulWrites(Android Studio) </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="education">
+                            <ul>
+                                <li><span>2023</span><br>Degree in BSc Computer Science (D. G. Ruparel College)</li>
+                                <li><span>2023</span><br>Java Course (RST Forum)</li>
+                                <li><span>2024</span><br>Java Full Stack (RST Forum)</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="skills">
+                            <ul>
+                                <li><span>Languages</span><br>Java<br>HTML&CSS <br>TypeScript <br>MySQL</li>
+                                <li><span>Framework</span><br>SpringBoot <br>Angular</li>
+                                <li><span>IDEs</span><br>Visual Studio<br>Android Studio <br>Unity 3D <br>MySQL Workbench <br>Eclipse <br>IntelliJ <br>NetBeans</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Work</span><br>Fresher</li>
+                                <li><span>Event</span><br>Logistics Head of DotTech intra-college Event held in College
+                                    <br> Unofficial ChairPerson of DotTech 
+                                    <br> Council Member of D. G. Ruparel Collge</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <!-- MyWork -->
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>p.khairnar2002@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+91 8850860982</p>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/prasad-khairnar-026359289"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/PrasadK02"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/pkhairnar_/"><i class="fa-brands fa-instagram"></i></a>
+
+                    </div>
+                    <div>
+                        <a href="images/Resume.pdf" download class="btn">Download Resume</a>
+                    </div>
+                </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabName){
+            for(tabLink of tabLinks){
+                tabLink.classList.remove("active-link");
+            }
+            for(tabCon of tabContents){
+                tabCon.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sideMenu = document.getElementById('sideMenu');
+        function openMenu(){
+            sideMenu.style.right="0";
+        }
+        function closeMenu(){
+            sideMenu.style.right="-200px";
+        }
+    </script>
+</body>
+</html>
